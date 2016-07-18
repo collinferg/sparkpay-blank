@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    $$HEADTAGS$$
+    <ac:templateoverridearea id="HeadTagsAddonArea"></ac:templateoverridearea>
+  </head>
+  <body class="LeftAndRightColumn" itemtype="http://schema.org/WebPage" itemscope="">
+
+    <header>
+      $$HEADER$$
+    </header>
+
+    <ac:templateoverridearea id="HeaderAddonArea"></ac:templateoverridearea>
+
+    <div class="row">
+
+      <aside class="col-sm-3">
+        <ac:templateoverridearea id="LeftColumn">
+          $$LEFTCOLUMN$$
+        </ac:templateoverridearea>
+      </aside>
+
+      <section class="col-sm-6">
+        $$PAGELAYOUT$$
+      </section>
+
+      <aside class="col-sm-3">
+        <ac:templateoverridearea id="RightColumn">
+          $$RIGHTCOLUMN$$
+        </ac:templateoverridearea>
+      </aside>
+      
+    </div>
+
+    <footer>
+      $$FOOTER$$
+    </footer>
+
+  </body>
+</html>
