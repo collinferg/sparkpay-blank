@@ -1,0 +1,177 @@
+<ac:pagelayout id="ProductDetailsPage" productpicwidth="300" thumbheight="75" thumbwidth="75" productpicheight="500" usetabs="True" thumbmaxcols="4">
+  
+  ##INCLUDESTYLESHEET[/store/inc/bxslider/jquery.bxslider.css]##
+  
+  <ac:visibilityarea id="ReviewAddedMessage">
+    $$REVIEWADDEDMESSAGE$$
+  </ac:visibilityarea>
+        
+  <ac:layoutarea id="PhotoArea">
+    <a href="$$LINKHREF$$" class="main-product-photo">$$MAINPHOTO$$</a>
+    <ac:visibilityarea id="lvCarousel">
+      $$THUMBNAILS$$
+    </ac:visibilityarea>
+  </ac:layoutarea>
+        
+  <ac:layoutarea id="PhotoThumbLayout">
+    <ul class="product-thumbnails">$$GROUP$$</ul>
+  </ac:layoutarea>
+  <ac:layoutarea id="PhotoThumbGroup">
+    $$ITEM$$
+  </ac:layoutarea>
+  <ac:layoutarea id="PhotoThumb">
+    <li><a href="$$THUMBLINKHREF$$">$$THUMBNAIL$$</a></li>
+  </ac:layoutarea>
+
+  <ac:visibilityarea id="Featured">
+    <div class="featured">Featured!</div>
+  </ac:visibilityarea>
+  <ac:visibilityarea id="Spotlight">
+    <div class="spotlight">Spotlight!</div>
+  </ac:visibilityarea>
+  <ac:visibilityarea id="Flag1">
+    <div class="flag1">New!</div>
+  </ac:visibilityarea>
+  <ac:visibilityarea id="Flag2">
+    <div class="flag2">Hot!</div>
+  </ac:visibilityarea>
+  <ac:visibilityarea id="Flag3">
+    <div class="flag3">Sale!</div>
+  </ac:visibilityarea>
+
+  <ac:visibilityarea id="ReviewRatingArea">
+    <div id="dvAverageReviewRatingStars">
+      $$AVERAGEREVIEWRATINGSTARS$$
+    </div>
+    ##IF[ReviewCount!=0]##
+      $$REVIEWCOUNTLINK$$.
+    ##ENDIF##
+  </ac:visibilityarea>
+
+  <ac:visibilityarea id="BulletsArea">
+    $$BULLETS$$
+  </ac:visibilityarea>        
+  
+  <ac:visibilityarea id="AvailabilityArea">
+    <p id="dvProductAvailability">
+      $$AVAILABILITY$$
+      $$NOTIFYME$$
+    </p>
+  </ac:visibilityarea>
+    
+  <ac:visibilityarea id="ETADateArea">
+    $$ETADATELABEL$$
+    $$ETADATE$$
+  </ac:visibilityarea>
+    
+  <ac:visibilityarea id="PricingArea">
+    <div id="dvProductPricing">
+      $$RETAIL$$
+      $$WASPRICE$$
+      $$PRICE$$
+      $$YOUSAVE$$
+      $$MAPPRICINGLINK$$
+      $$DISCOUNTLIST$$
+      $$REWARDPOINTSTOPURCHASE$$
+      $$REWARDPOINTSEARNED$$
+      $$BONUSREWARDPOINTSEARNED$$
+    </div>
+  </ac:visibilityarea>
+
+  <ac:visibilityarea id="ProductDetailsArea">
+    <ac:visibilityarea id="ProductVariations">
+      <div id="dvProductVariations">
+        <ac:layoutarea id="Personalization">
+          $$PERSONALIZATIONQUESTION$$
+          $$PERSONALIZATIONCONTROLS$$             
+        </ac:layoutarea>
+        <ac:layoutarea id="Variant">  
+          $$VARIANTGROUPNAME$$ 
+          $$VARIANTGROUPHEADER$$  
+          $$VARIANTGROUPCONTROLS$$    
+          <ac:visibilityarea id="VariantGroupSwatches"> 
+            $$VARIANTGROUPSWATCHES$$
+          </ac:visibilityarea>            
+          $$VARIANTGROUPFOOTER$$
+        </ac:layoutarea>
+        $$UPDATELINK$$
+        <ac:visibilityarea id="DetailedConfiguration">
+          $$DETAILEDCONFIGLINK$$
+        </ac:visibilityarea>
+      </div>
+    </ac:visibilityarea>
+    <ac:visibilityarea id="QuantityInStockArea">
+      <div id="dvProductQuantityInStock">
+        $$STOCKLABEL$$
+        $$STOCKQUANTITY$$
+      </div>
+    </ac:visibilityarea>
+  </ac:visibilityarea>
+  
+  <ac:visibilityarea id="AddToCartArea">
+    <div id="dvProductQuantity" data-qty-min="##MINQUANT##" data-qty-max="##MAXQUANT##" data-qty-inc="##MULTIPLESOFQUANT##">
+      $$QUANTITY$$
+      $$ADDTOCART$$          
+      <ac:visibilityarea id="ibtnAddToWishlist">
+        $$ADDTOWISHLIST$$
+      </ac:visibilityarea>
+    </div>
+  </ac:visibilityarea>
+  
+  <ac:visibilityarea id="QuantityDiscountsArea">
+    <div id="dvQuantityDiscounts">
+      $$QUANTITYDISCOUNTS$$
+      ##VARIANTQUANTITYGRIDOF[]##
+    </div>
+  </ac:visibilityarea>
+
+  <ac:visibilityarea id="VariantMatrixArea">
+    <div id="dvVariantMatrix" >
+      $$VARIANTMATRIXHELPTEXT$$
+      $$VARIANTMATRIX$$
+      $$VARIANTMATRIXADDTOCART$$
+    </div>
+  </ac:visibilityarea>
+
+  <ac:visibilityarea id="ProductGroupArea">
+    <div id="dvProductGroupGrid">
+      <ac:visibilityarea id="ProductGroups">
+        <div id="divProductDisplay">
+          Item #
+          Description/Size
+          Availability
+          Qty Break
+          Price
+          Quantity
+          <ac:layoutarea id="ProductGroupDetail">
+            $$ITEMNR$$
+            $$LONGDESCRIPTION$$
+            $$AVAILABILITY$$
+            $$QTYBREAKS$$
+            $$PRICE$$
+            $$QUANTITY$$$$ADDTOCART$$
+          </ac:layoutarea>
+          <ac:layoutarea id="ProductGroupDetailAlt">
+            $$ITEMNR$$
+            $$LONGDESCRIPTION$$
+            $$AVAILABILITY$$
+            $$QTYBREAKS$$
+            $$PRICE$$
+            $$QUANTITY$$$$ADDTOCART$$
+          </ac:layoutarea>
+          <ac:visibilityarea id="UpdateGroupPrice">
+            $$PRODUCTGROUPTOTAL$$
+            $$PRODUCTGROUPUPDATEPRICE$$
+          </ac:visibilityarea>
+        </div>
+        $$PRODUCTGROUPADDTOCARTBUTTON$$
+      </ac:visibilityarea>
+    </div>
+  </ac:visibilityarea>
+
+  <a href="##ITEMURL##" target="_top">View Full Product</a>
+  
+  ##INCLUDESCRIPTBOTTOM[/store/inc/bxslider/jquery.bxslider.js]##
+  ##INCLUDESCRIPTBOTTOM[##THEMEDIR##js/jquery.zoom.js]##
+  ##INCLUDESCRIPTBOTTOM[##THEMEDIR##js/product-page.js]##
+</ac:pagelayout>
