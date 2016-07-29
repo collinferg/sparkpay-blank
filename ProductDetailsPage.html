@@ -1,0 +1,298 @@
+<ac:templateoverridearea id="LeftColumn">
+  <ac:widgetarea id="ProductLeftTop"></ac:widgetarea>
+  $$LEFTCOLUMN$$
+  <ac:widgetarea id="ProductLeftBottom"></ac:widgetarea>
+</ac:templateoverridearea>
+<ac:templateoverridearea id="RightColumn">
+  <ac:widgetarea id="ProductRightTop"></ac:widgetarea>
+  $$RIGHTCOLUMN$$
+  <ac:widgetarea id="ProductRightBottom"></ac:widgetarea>
+</ac:templateoverridearea>
+<ac:pagelayout id="ProductDetailsPage" swatchimagewidth="50" enlargepicture="True" productpicwidth="450" thumbheight="75" renderswatchesasunorderedlist="True" manufacturerlogowidth="450" swatchposition="Below" swatchimageheight="30" thumbwidth="75" productpicheight="450" usetabs="True" showswatchnexttovariantoption="True" thumbmaxcols="4" manufacturerlogoheight="450">
+  
+  ##INCLUDESTYLESHEET[/store/inc/bxslider/jquery.bxslider.css]##
+
+  <div itemscope="" itemtype="http://schema.org/Product">
+    <meta itemprop="category" content="##CATNAME##">
+    <meta itemprop="identifier" content="##GTIN##">
+    <meta itemprop="productID" content="##GTIN##">
+
+    <div class="breadcrumb">$$CATEGORYTRAIL$$ $$PRODUCTNAME$$</div>
+
+    <ac:visibilityarea id="ReviewAddedMessage">
+      <div class="alert alert-success">$$REVIEWADDEDMESSAGE$$</div>
+    </ac:visibilityarea>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <ac:layoutarea id="PhotoArea">
+          <a href="$$LINKHREF$$" itemprop="image" class="main-product-photo">
+            $$MAINPHOTO$$
+          </a>
+          <ac:visibilityarea id="lvCarousel">
+            $$THUMBNAILS$$
+          </ac:visibilityarea>
+        </ac:layoutarea>
+        <ac:layoutarea id="PhotoThumbLayout">
+          <ul class="product-thumbnails">$$GROUP$$</ul>
+        </ac:layoutarea>
+        <ac:layoutarea id="PhotoThumbGroup">
+          $$ITEM$$
+        </ac:layoutarea>
+        <ac:layoutarea id="PhotoThumb">
+          <li><a href="$$THUMBLINKHREF$$">$$THUMBNAIL$$</a></li>
+        </ac:layoutarea>
+      </div>
+      <div class="col-sm-6">
+        <h1 itemprop="name">$$PRODUCTNAME$$</h1>
+        <ac:visibilityarea id="ReviewRatingArea">
+          $$AVERAGEREVIEWRATINGSTARS$$
+          ##IF[ReviewCount!=0]##
+          <span itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+            <span itemprop="ratingValue">##AVERAGERATING##</span> stars, based on <span itemprop="reviewCount">##REVIEWCOUNT##</span> reviews
+          </span>
+          $$REVIEWCOUNTLINK$$.
+          ##ELSE##
+          There are no reviews yet.
+          ##ENDIF##
+          | $$WRITEREVIEWLINK$$
+        </ac:visibilityarea>
+        <ac:visibilityarea id="ItemNumberArea">
+          $$ITEMNRLABEL$$ <strong itemprop="sku">$$ITEMNR$$
+        </ac:visibilityarea>
+        <ac:visibilityarea id="AvailabilityArea">
+          $$AVAILABILITY$$
+          $$NOTIFYME$$
+          <ac:visibilityarea id="ETADateArea">
+            $$ETADATELABEL$$
+            $$ETADATE$$
+          </ac:visibilityarea>
+          <ac:visibilityarea id="QuantityInStockArea">
+            $$STOCKLABEL$$
+            $$STOCKQUANTITY$$
+          </ac:visibilityarea>
+        </ac:visibilityarea>
+        <div itemprop="manufacturer" content="##MFGNAME##">
+          $$MFGNAME$$
+          $$MFGLOGO$$
+        </div>
+        <ac:visibilityarea id="BulletsArea">
+          $$BULLETS$$
+        </ac:visibilityarea>
+        <ac:visibilityarea id="PricingArea">
+            <div id="dvProductPricing" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+              <meta itemprop="priceCurrency" content="USD">
+              <meta itemprop="seller" content="##STORENAME##">
+              $$RETAIL$$
+              $$WASPRICE$$
+              <div itemprop="price">$$PRICE$$</div>
+              $$YOUSAVE$$
+              $$MAPPRICINGLINK$$
+              $$DISCOUNTLIST$$
+              $$REWARDPOINTSTOPURCHASE$$
+              $$REWARDPOINTSEARNED$$
+              $$BONUSREWARDPOINTSEARNED$$
+            </div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="ProductDetailsArea">
+          <ac:visibilityarea id="ProductVariations">
+            <div id="dvProductVariations">
+              <ac:layoutarea id="Personalization">
+                $$PERSONALIZATIONQUESTION$$
+                $$PERSONALIZATIONCONTROLS$$            
+              </ac:layoutarea>
+              <ac:layoutarea id="Variant">  
+                $$VARIANTGROUPNAME$$
+                $$VARIANTGROUPHEADER$$  
+                $$VARIANTGROUPCONTROLS$$    
+                <ac:visibilityarea id="VariantGroupSwatches"> 
+                  $$VARIANTGROUPSWATCHES$$
+                </ac:visibilityarea>            
+                $$VARIANTGROUPFOOTER$$
+              </ac:layoutarea>
+              $$UPDATELINK$$
+              <ac:visibilityarea id="DetailedConfiguration">
+                $$DETAILEDCONFIGLINK$$
+              </ac:visibilityarea>
+            </div>
+          </ac:visibilityarea>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="AddToCartArea">
+          <div id="dvProductQuantity">
+            $$QUANTITYLABEL$$
+            $$QUANTITY$$
+            $$ADDTOCART$$
+            <ac:visibilityarea id="ibtnAddToWishlist">
+              $$ADDTOWISHLIST$$
+            </ac:visibilityarea>
+          </div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="SocialBookmarksArea">
+          <div id="divSocialBookmarks">
+            ##SOCIALBOOKMARKS##
+          </div>
+        </ac:visibilityarea>
+      </div>
+    </div>
+    <ac:visibilityarea id="lblQuantityDiscounts">
+      $$QUANTITYDISCOUNTS$$
+      ##VARIANTQUANTITYGRIDOF[]##
+    </ac:visibilityarea>
+    <ac:visibilityarea id="VariantMatrixArea">
+      <div id="dvVariantMatrix">
+        $$VARIANTMATRIXHELPTEXT$$
+        $$VARIANTMATRIX$$
+        $$VARIANTMATRIXADDTOCART$$
+      </div>
+    </ac:visibilityarea>
+    <ac:visibilityarea id="ProductGroupArea">
+      <div id="dvProductGroupGrid">
+        <ac:visibilityarea id="ProductGroups">
+          <div id="divProductDisplay">
+            Item #
+            Description/Size
+            Availability
+            Qty Break
+            Price
+            Quantity
+            <ac:layoutarea id="ProductGroupDetail">
+              $$ITEMNR$$
+              $$LONGDESCRIPTION$$
+              $$AVAILABILITY$$
+              $$QTYBREAKS$$
+              $$PRICE$$
+              $$QUANTITY$$$$ADDTOCART$$
+            </ac:layoutarea>
+            <ac:layoutarea id="ProductGroupDetailAlt">
+              $$ITEMNR$$
+              $$LONGDESCRIPTION$$
+              $$AVAILABILITY$$
+              $$QTYBREAKS$$
+              $$PRICE$$
+              $$QUANTITY$$$$ADDTOCART$$
+            </ac:layoutarea>
+            <ac:visibilityarea id="UpdateGroupPrice">
+              $$PRODUCTGROUPTOTAL$$
+              $$PRODUCTGROUPUPDATEPRICE$$
+            </ac:visibilityarea>
+          </div>
+          $$PRODUCTGROUPADDTOCARTBUTTON$$
+        </ac:visibilityarea>
+      </div>
+    </ac:visibilityarea>
+
+    <ac:layoutarea id="Tabs">
+      <ul class="nav nav-tabs" id="tabs">
+        <ac:visibilityarea id="desc1">
+          <li><a class="active" data-toggle="tab" href="#desc1">$$TABNAME1$$</a></li>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="desc2">
+          <li><a class="active" data-toggle="tab" href="#desc2">$$TABNAME2$$</a></li>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="desc3">
+          <li><a class="active" data-toggle="tab" href="#desc3">$$TABNAME3$$</a></li>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="desc4">
+          <li><a class="active" data-toggle="tab" href="#desc4">$$TABNAME4$$</a></li>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="desc5">
+          <li><a class="active" data-toggle="tab" href="#desc5">$$TABNAME5$$</a></li>
+        </ac:visibilityarea>
+        <li><a class="active" data-toggle="tab" href="#reviews">Reviews (##REVIEWCOUNT##)</a></li>
+      </ul>
+      <div class="tab-content" itemprop="description">
+        <ac:visibilityarea id="desc1">
+          <div class="tab-pane fade in pad-20 no-pad-lr active" id="desc1">$$TAB1$$</div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="desc2">
+          <div class="tab-pane fade in pad-20 no-pad-lr active" id="desc2">$$TAB2$$</div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="desc3">
+          <div class="tab-pane fade in pad-20 no-pad-lr active" id="desc3">$$TAB3$$</div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="desc4">
+          <div class="tab-pane fade in pad-20 no-pad-lr active" id="desc4">$$TAB4$$</div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="desc5">
+          <div class="tab-pane fade in pad-20 no-pad-lr active" id="desc5">$$TAB5$$</div>
+        </ac:visibilityarea>
+        <div class="tab-pane fade in pad-20 no-pad-lr active" id="reviews">
+          <ac:widgetarea id="Reviews"><ac:widget id="PRODUCTREVIEWSLISTING47151" type="ProductReviewsListing">
+            <ac:visibilityarea id="dvControl">
+              <!--$$HEADER$$-->
+              $$ADMINHELP$$
+              <div class="panel">
+                <ac:layoutarea id="Summary">
+                  <ac:visibilityarea id="dvProductReviewSummary">
+                    <div>Overall Customer Rating of ##REVIEWCOUNT## Reviews: $$OVERALLRATING$$</div>
+                  </ac:visibilityarea>
+                </ac:layoutarea>
+                <div class="pad-20 pad-t-only">
+                  <div class="in-block">$$WRITEREVIEWLINK$$</div>
+                  <div class="in-block">$$READALLREVIEWSLINK$$</div>
+                </div>
+              </div>
+              <div class="media-list pad-20 no-pad-lr">
+                <ac:layoutarea id="Item">
+                  <div class="media" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+                    <div class="pull-left hidden-xs">
+                      <i class="glyphicon glyphicon-user media-object text-muted" style="font-size:100px;"></i>
+                    </div>
+                    <div class="media-body">
+                      <div class="row">
+                        <div class="col-sm-2">
+                          <div class="ProductReviewItemMeta">
+                            <span itemprop="author">$$AUTHORNAME$$</span>
+                            <div class="text-muted">$$AUTHORLOCATION$$</div>
+                          </div>
+                        </div>
+                        <div class="col-sm-10">
+                          <div class="pad-20 pad-b-only clearfix">
+                            <h4 class="media-heading pull-left">
+                              <span class="in-block" itemprop="name">$$REVIEWTITLE$$</span>
+                            </h4>
+                            <div itemprop="datePublished" class="pull-right text-muted">
+                              $$REVIEWDATE$$
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-4">
+                              $$REVIEWRATINGS$$
+                              $$REVIEWPROS$$
+                              $$REVIEWCONS$$
+                            </div>
+                            <div class="col-sm-8">
+                              <blockquote itemprop="description">
+                                $$REVIEWBODY$$
+                              </blockquote>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                </ac:layoutarea>
+              </div>
+            </ac:visibilityarea>
+            </ac:widget>
+          </ac:widgetarea>
+        </div>
+      </div>
+      <script>
+        $(function(){
+          $("#tabs a").click(function(e){
+            e.preventDefault();
+            $(this).tab("show");
+          });
+          $("#tabs a:first").click();
+        });
+      </script>
+    </ac:layoutarea>
+
+    ##INCLUDESCRIPTBOTTOM[/store/inc/bxslider/jquery.bxslider.js]##
+    ##INCLUDESCRIPTBOTTOM[##THEMEDIR##js/jquery.zoom.js]##
+    ##INCLUDESCRIPTBOTTOM[##THEMEDIR##js/product-page.js]##
+  </div>
+
+</ac:pagelayout>

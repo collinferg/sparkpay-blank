@@ -1,0 +1,151 @@
+<ac:pagelayout id="ShoppingCartPage" showshippingcalculation="True" productpictureheight="150" productpicturewidth="72">
+
+    <h1>Your Shopping Cart <small> - ##CARTITEMSCOUNT## Item(s) ##CARTSUBTOTAL##</small></h1>
+
+    <div class="row">
+      <ac:widgetarea id="Right">
+        <ac:widget id="LARGESHOPPINGCART47276" type="LargeShoppingCart">
+          <ac:visibilityarea id="MessageControlsArea">
+            $$MESSAGE$$ $$SHIPPINGNOTICE$$ $$ERRORTEXT$$
+            $$ECERROR$$
+          </ac:visibilityarea>
+          <div class="col-sm-8">
+            Product Description
+            Unit Price
+            Quantity
+            Total
+            <ac:layoutarea id="ShopCartItem">
+              $$CHILDBRANCHIMAGE$$
+              $$SELECTCHECKBOX$$
+              <a href="##ITEMURL##">$$THUMBNAIL$$</a>
+              $$ITEMNAME$$
+              $$CALLFORSHIPPING$$
+              $$ITEMNR$$
+              $$MFGNAME$$
+              $$VARIANTS$$
+              $$PERSONALIZE$$
+              $$REMOVEFROMCARTLINK$$
+              <ac:visibilityarea id="ibtnMoveToWishlist">
+                $$MOVETOWISHLISTBUTTON$$ $$MOVETOCARTBUTTON$$
+              </ac:visibilityarea>
+              <ac:visibilityarea id="ShippingCodeArea">
+                $$SHIPPINGCODE$$
+              </ac:visibilityarea>
+              <ac:visibilityarea id="PurchasedQuantityArea">
+                $$PURCHASEDQUANTITYTEXTBOX$$
+              </ac:visibilityarea>
+              $$ITEMORIGINALPRICEDOLLARS$$$$ITEMORIGINALPRICECENTS$$
+              $$ITEMPRICEDOLLARS$$ $$ITEMPRICECENTS$$ $$UNITS$$
+              <div data-qty-min="##MINQUANT##" data-qty-max="##MAXQUANT##" data-qty-inc="##MULTIPLESOFQUANT##">
+                $$QUANTITYTEXTBOX$$
+                $$UPDATEBUTTON$$
+              </div>
+              $$ITEMORIGINALTOTALDOLLARS$$$$ITEMORIGINALTOTALCENTS$$
+              $$ITEMTOTALDOLLARS$$$$ITEMTOTALCENTS$$
+            </ac:layoutarea>
+            <ac:visibilityarea id="ButtonControlsArea">
+              $$COUPONERROR$$
+              $$CONTINUESHOPPINGBUTTON$$
+              $$CLEARCARTBUTTON$$ $$SAVECARTBUTTON$$
+              $$EMAILCART$$
+            </ac:visibilityarea>
+            <ac:visibilityarea id="PointsEarnedArea">
+              You will earn <em class="reward-points">$$REWARDPOINTSEARNED$$</em> ##REWARDPOINTSLABEL##!
+            </ac:visibilityarea>
+            $$CUSTOMMESSAGE$$
+          </div>
+          <div class="col-sm-4">
+            $$SAVEDCARTNOTIFICATION$$
+            <ac:visibilityarea id="SubtotalArea">
+              Subtotal
+              $$SUBTOTALDOLLARS$$$$SUBTOTALCENTS$$
+            </ac:visibilityarea>
+            <ac:visibilityarea id="DiscountArea">
+              $$DISCOUNTLABEL$$ $$DISCOUNTSTRING$$
+              -$$DISCOUNTTOTALDOLLARS$$$$DISCOUNTTOTALCENTS$$
+            </ac:visibilityarea>
+            <ac:visibilityarea id="GiftCertificatesArea">
+              The following gift certificates will be applied at checkout:
+              <ac:layoutarea id="ShopCartGiftCertificate">
+                $$GIFTCERTIFICATECODE$$ $$GIFTCERTIFICATEREMOVEBUTTON$$
+                $$GIFTCERTIFICATEAMOUNT$$
+              </ac:layoutarea>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="ShippingControlsArea">
+              <ac:visibilityarea id="CalculateShippingFormArea">
+                $$SHIPPINGCALCULATORLABEL$$
+                $$SHIPPINGCALCULATIONERROR$$
+                <ac:visibilityarea id="CitySelectArea">
+                  $$CITYLABEL$$
+                  $$CITYTEXTBOX$$
+                </ac:visibilityarea>
+                <ac:visibilityarea id="StateSelectArea">
+                  $$STATELABEL$$
+                  $$STATEDROPDOWN$$
+                </ac:visibilityarea>
+                <ac:visibilityarea id="PostalEntryArea">
+                  $$POSTALCODELABEL$$
+                  $$POSTALCODETEXTBOX$$
+                </ac:visibilityarea>
+                $$COUNTRYLABEL$$
+                $$COUNTRYDROPDOWN$$$$SETSHIPTOBUTTON$$
+              </ac:visibilityarea>
+              <ac:visibilityarea id="ShippingMethodArea">
+                Select Shipping Method:
+                $$SHIPPINGMETHODDROPDOWN$$
+                $$SHIPPINGMETHODSELECTBUTTON$$
+                $$SHIPPINGADDITIONALINFORMATION2$$
+              </ac:visibilityarea>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="InlineCalculateShippingFormArea">
+              <ac:visibilityarea id="InlinePostalCodeArea">
+                $$INLINEPOSTALCODELABEL$$
+                $$INLINEPOSTALCODETEXTBOX$$ $$INLINESETSHIPTOBUTTON$$ $$SHIPPINGADDITIONALINFORMATION$$
+              </ac:visibilityarea>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="CouponCodeArea">
+              $$COUPONCODELABEL$$
+              Click to Enter a Coupon Code.
+              $$COUPONCODETEXTBOX$$
+              $$ADDCOUPONCODEBUTTON$$
+            </ac:visibilityarea>
+            <ac:visibilityarea id="TaxArea">
+              Tax
+              $$TAXTOTALDOLLARS$$$$TAXTOTALCENTS$$
+            </ac:visibilityarea>
+            <ac:visibilityarea id="ShippingArea">
+              <ac:visibilityarea id="ShippingLabelArea">
+                  $$SHIPPINGLABEL$$ $$SHIPPINGDESCRIPTION$$
+                  $$SHIPPINGINFO$$
+              </ac:visibilityarea>
+              $$SHIPPINGTOTALDOLLARS$$$$SHIPPINGTOTALCENTS$$
+            </ac:visibilityarea>
+            <ac:visibilityarea id="AdditionalFeesArea">
+              $$ADDITIONALFEESLABEL$$
+              $$ADDITIONALFEESTOTALDOLLARS$$$$ADDITIONALFEESTOTALCENTS$$
+            </ac:visibilityarea>
+            <ac:visibilityarea id="HandlingArea">
+              Handling Fee
+              $$HANDLINGTOTALDOLLARS$$$$HANDLINGTOTALCENTS$$
+            </ac:visibilityarea>
+            <ac:visibilityarea id="ShippingErrorArea">
+              Shipping Error: $$SHIPPINGERROR$$
+            </ac:visibilityarea>
+            <ac:visibilityarea id="TotalArea">
+              Estimated Total
+              $$TOTALDOLLARS$$$$TOTALCENTS$$
+              <ac:visibilityarea id="TotalInPointsArea">
+                -or- $$TOTALINPOINTS$$ ##REWARDPOINTSLABEL##)
+              </ac:visibilityarea>
+            </ac:visibilityarea>
+            $CHECKOUTBUTTON$$
+            Pay With ##ACCEPTEDCREDITCARDLOGOS## $$AMAZONCHECKOUTBUTTON$$ $$PAYPALEXPRESSCHECKOUTBUTTON$$ $$GOOGLECHECKOUTBUTTON$$
+          </div>
+        </ac:widget>
+      </ac:widgetarea>
+    </div>
+
+    $$EMPTYCARTMESSAGE$$
+    $$CONTINUESHOPPINGBUTTON$$
+
+</ac:pagelayout>
