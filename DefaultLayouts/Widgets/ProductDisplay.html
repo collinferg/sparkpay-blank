@@ -1,0 +1,47 @@
+<ac:visibilityarea id="dvControl">
+
+  $$ADMINHELP$$
+  $$HEADER$$
+
+  <ac:layoutarea id="Layout">
+    $$GROUP$$
+  </ac:layoutarea>
+
+  <ac:layoutarea id="Group">
+    <div class="row">$$ITEM$$</div>
+  </ac:layoutarea>
+
+  <ac:layoutarea id="Item">
+    <div class="##PRODUCTCOLUMNCSSCLASS[1=col-xs-12,2=col-xs-12 col-sm-6,3=col-xs-6 col-md-4,4=col-xs-12 col-sm-6 col-md-3,6=col-sm-2]##">
+      <ac:visibilityarea id="dvControlItem">    
+        <a href="##ITEMURL##">
+          <button class="quick-view" data-href="##ITEMURL##?previewlayoutname=Product%20Quick%20View">
+            Quick View<span class="hidden product-name">##ITEMNAME## - ##ITEMNR##</span>
+          </button>
+          <ac:visibilityarea id="Featured">
+            Featured!
+          </ac:visibilityarea>
+          <ac:visibilityarea id="Spotlight">
+            Spotlight!
+          </ac:visibilityarea>
+          <ac:visibilityarea id="Flag1">
+            New!
+          </ac:visibilityarea>
+          <ac:visibilityarea id="Flag2">
+            Hot!
+          </ac:visibilityarea>
+          <ac:visibilityarea id="Flag3">
+            Sale!
+          </ac:visibilityarea>
+          $$PHOTO$$
+        </a>
+        ##PRODUCTNAME##
+        $$PRICE$$
+        <a href="##ADDTOCARTURL##">Buy</a>
+        <a href="##ITEMURL##">View</a>
+      </ac:visibilityarea>
+    </div>
+  </ac:layoutarea>
+
+</ac:visibilityarea>
+

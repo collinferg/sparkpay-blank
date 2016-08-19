@@ -1,0 +1,101 @@
+<ac:templateoverridearea id="LeftColumn">
+  <ac:widgetarea id="SearchLeftTop">
+</ac:widgetarea>
+  $$LEFTCOLUMN$$
+  <ac:widgetarea id="SearchLeftBottom">
+</ac:widgetarea>
+</ac:templateoverridearea>
+<ac:templateoverridearea id="RightColumn">
+  <ac:widgetarea id="SearchRightTop">
+</ac:widgetarea>
+  $$RIGHTCOLUMN$$
+  <ac:widgetarea id="SearchRightBottom">
+</ac:widgetarea>
+</ac:templateoverridearea>
+<ac:pagelayout id="SearchPage" resizeproductthumb="True" productpicwidth="" productsperrow="4" sizeproportionally="True" layoutstyle="Horizontal" showswatchesforvariants="True" pagingtype="NumberedPageLinks" productpicheight="250" displaysortbox="True" showvariantsandpersonalizations="True" pagesize="12">
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &gt; Search Results
+  </div>
+
+  Search Results for "$$SEARCHSTRING$$"
+
+  $$SEARCHBOX$$
+  $$SEARCHTYPE$$
+  $$SEARCHBUTTON$$
+  <ac:visibilityarea id="AdvancedSearchArea">
+    Only search in: $$ADVANCEDSEARCHDROPDOWN$$
+  </ac:visibilityarea>
+  
+  <ac:visibilityarea id="TopNavigationArea">
+    $$PRODUCTCOUNTTOP$$
+    $$SORTBYDROPDOWN$$
+    $$NUMBERPERPAGEDROPDOWNLABEL$$
+    $$SHOWBYPAGESIZE$$
+  </ac:visibilityarea>
+      
+  <ac:layoutarea id="ProductListLayout">
+    $$GROUP$$
+  </ac:layoutarea>
+
+  <ac:layoutarea id="ProductListGroup">
+    $$ITEM$$
+  </ac:layoutarea>
+
+  <ac:layoutarea id="ProductList">
+    <div class="##PRODUCTCOLUMNCSSCLASS[1=col-xs-12,2=col-sm-6,3=col-md-4 col-xs-6,4=col-md-3 col-sm-6]##  m-30 m-b-only category-product grid-view">
+      <a href="##ITEMURL##">
+        <ac:if setting="Show Product Quickview on Search Page">
+          <button class="quick-view" data-href="##ITEMURL##?previewlayoutname=Product%20Quick%20View">Quick View<span class="hidden product-name">##ITEMNAME## - ##ITEMNR##</span></button>
+        </ac:if>
+        $$THUMBNAIL$$
+        <ac:visibilityarea id="Featured">
+          Featured!
+        </ac:visibilityarea>
+        <ac:visibilityarea id="Spotlight">
+          Spotlight!
+        </ac:visibilityarea>
+        <ac:visibilityarea id="Flag1">
+          New!
+        </ac:visibilityarea>
+        <ac:visibilityarea id="Flag2">
+          Hot!
+        </ac:visibilityarea>
+        <ac:visibilityarea id="Flag3">
+          Sale!
+        </ac:visibilityarea>
+      </a>
+      <ac:visibilityarea id="AddToCartArea">
+        $$QUANTITYBOX$$
+        $$ADDTOCARTBUTTON$$
+      </ac:visibilityarea>
+      <a href="##ITEMURL##">##PRODUCTNAME##</a>
+      <ac:visibilityarea id="ltrRetailPrice">
+        $$RETAILPRICE$$
+      </ac:visibilityarea>
+      <ac:visibilityarea id="ltrWasPrice">
+        $$WASPRICE$$
+      </ac:visibilityarea>
+      <ac:visibilityarea id="ltrPrice">
+        $$PRICE$$
+      </ac:visibilityarea>
+      <ac:visibilityarea id="ProductRatingArea">
+        $$AVERAGEREVIEWRATINGSTARS$$
+        ##IF[ReviewCount!=0]##
+        (##REVIEWCOUNT##)
+        ##ENDIF##
+      </ac:visibilityarea>
+    </div>
+  </ac:layoutarea>
+      
+  <ac:visibilityarea id="BottomNavigationArea">
+    <ac:layoutarea id="ProductListPaging">
+      <ul class="pagination">
+        <li>$$PREVIOUS$$</li>
+        $$PAGES$$
+        <li>$$NEXT$$</li>
+      </ul>
+    </ac:layoutarea> 
+  </ac:visibilityarea>
+
+</ac:pagelayout>

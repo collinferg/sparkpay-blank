@@ -1,0 +1,102 @@
+<ac:pagelayout id="RegisterPage">
+
+  <script>
+    dontEscape = true;
+  </script>
+  Registration
+  $$ERRORTEXT$$
+
+  Please enter your information below:
+  Note: All required fields are marked with an *
+  <ac:visibilityarea id="phLinkedAccountInf">
+    $$LINKACCOUNTMESSAGE$$ $$CACELLINKEDACCOUNT$$
+  </ac:visibilityarea>
+
+  First Name *
+  $$FIRSTNAMETEXTBOX$$
+
+  Last Name *
+  $$LASTNAMETEXTBOX$$
+
+  <ac:visibilityarea id="trCompany">
+    Company *
+    $$COMPANYTEXTBOX$$
+  </ac:visibilityarea>
+
+  <label>
+    Email Address *
+    $$EMAILADDRESSTEXTBOX$$
+  </label>
+
+  <label>
+    Display Name
+    $$DISPLAYNAMETEXTBOX$$
+  </label>
+  This is the name that will be shown on your public profile as well as on any blog comments.
+
+  <label>
+    Password *
+    $$PASSWORDTEXTBOX$$
+  </label>
+
+  <label>
+    Confirm Password *
+    $$CONFIRMPASSWORDTEXTBOX$$
+  </label>
+
+  <ac:visibilityarea id="lblAddress1">
+    <label>
+      Adress Line 1 *
+      $$ADDRESSTEXTBOX1$$
+    </label>
+    <label>
+      Address Line 2
+      $$ADDRESSTEXTBOX2$$
+    </label>
+  </ac:visibilityarea>
+
+  <ac:visibilityarea id="lblState">
+    <label>
+      City *
+      $$CITYTEXTBOX$$
+    </label>
+    <label>
+      State *
+      $$STATEDROPDOWN$$
+      $$STATETEXTBOX$$
+    </label>
+  </ac:visibilityarea>
+
+  <ac:visibilityarea id="lblZipCode">
+    <label>
+      Postal Code *
+      $$ZIPCODETEXTBOX$$
+    </label>
+    <label>
+      Country *
+      $$COUNTRYDROPDOWN$$
+    </label>
+  </ac:visibilityarea>
+
+  <ac:visibilityarea id="lblPhone">
+    <label>
+      Phone Number *
+      $$PHONETEXTBOX$$
+    </label>
+    <ac:visibilityarea id="tdFaxNumber">
+      <label>
+        Fax
+        $$FAXTEXTBOX$$
+      </label>
+    </ac:visibilityarea>
+  </ac:visibilityarea>
+
+  <ac:visibilityarea id="trDontRememberMe">
+    $$DONOTREMEMBERME$$
+  </ac:visibilityarea>
+
+  <label>$$MAILINGLISTCHECKBOX$$ $$MAILINGLISTLABEL$$</label>
+
+  $$REGISTERBUTTON$$
+
+</ac:pagelayout>

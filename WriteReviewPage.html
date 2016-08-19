@@ -1,0 +1,52 @@
+<ac:pagelayout id="WriteReviewPage">
+
+  Write a Product Review For:
+  <ac:layoutarea id="ProductInfo">
+    $$THUMBNAIL$$
+    ##ITEMNAME## (##ITEMNR##)
+    ##SHORTDESCRIPTION##
+    ##AVERAGERATING## of 5<
+    <a href="##ITEMURL##">&larr; Return to product page</a>
+  </ac:layoutarea>
+  <ac:visibilityarea id="ExistingCustomers">
+    Existing Customers
+    If you have an account, $$LOGINLINK$$.
+  </ac:visibilityarea>
+  $$PROFILEINACTIVE$$
+  <ac:visibilityarea id="ReviewForm">
+    How do you rate this product?
+    <ac:layoutarea id="RatingListItem">
+      $$DIMENSIONNAME$$
+      $$DIMENSIONRATING$$
+    </ac:layoutarea>
+    <ac:visibilityarea id="SingleDimensionRating">
+      $$SINGLEDIMENSIONRATING$$
+    </ac:visibilityarea>
+    Detail how you feel about this product. The title is optional, but you should at least
+    leave some comments about why you rated the product the way you did above.
+    Title:
+    $$TITLEFIELD$$
+    Review Body
+    $$BODYFIELD$$
+    <ac:visibilityarea id="ProsCons">
+      Pick some keywords or adjectives that describe what you liked and/or disliked about the product in particular, i.e. "price" or "quality."
+      Pros:
+      $$PROS$$
+      Cons:
+      $$CONS$$
+    </ac:visibilityarea>
+    Your Information - Your email address will not be shown, but the rest of this information will be visible by anyone who can see the review.
+    $$DISPLAYNAMELABEL$$
+    $$DISPLAYNAMEFIELD$$
+    Email
+    $$EMAILFIELD$$
+    To change your email address, please use the My Account page.
+    Website:
+    $$WEBSITEFIELD$$
+    Location:
+    $$LOCATIONFIELD$$
+    $$MAKEDEFAULTCHECKBOX$$
+    $$CONTINUEBUTTON$$
+  </ac:visibilityarea>
+
+</ac:pagelayout>
